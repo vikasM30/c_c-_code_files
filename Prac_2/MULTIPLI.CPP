@@ -1,0 +1,19 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int a, b, i, j;
+clrscr();
+printf("Enter any number");
+scanf("%d", &a);
+for(i=1; i<=a; i++)
+{
+	for(j=1; j<=10; j++)
+	{
+		b= i*j;
+		printf("\t%d", b);
+	}
+	printf("\n");
+}
+getch();
+}

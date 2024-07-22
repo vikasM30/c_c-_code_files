@@ -1,0 +1,61 @@
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+void main()
+{clrscr();
+gotoxy(10,10);
+textcolor(BROWN);
+cprintf("WELCOME TO THE GAME") ;
+gotoxy(25,11);
+textcolor(CYAN)
+cprintf("SHUBHAM SINGH");
+getch();
+clrscr();
+int m=2,n=2;
+randomize();
+char ch;
+int a=1,b=1,l=0;
+while(l<1000)
+
+{
+ while(m==a&&n==b)
+ {
+ m=random(30);
+ n=random(15);
+ }
+ gotoxy(m,n);
+ printf("*");
+ gotoxy(a,b);
+ while(a!=m||b!=n)
+ {
+  ch=getch();
+  switch (ch)
+   {
+    case '8':
+    gotoxy(a,--b);
+    textcolor(RED);
+    cprintf("o");
+    break;
+
+    case '4':
+    gotoxy(--a,b);
+    textcolor(BLUE);
+    cprintf("o");
+    break;
+
+    case '6':
+    gotoxy(++a,b);
+    textcolor(CYAN);
+    cprintf("o");
+    break;
+
+    case '2':
+    gotoxy(a,++b);
+    printf("o");
+    break;
+   }
+  }
+  l++;
+}
+getch();
+}

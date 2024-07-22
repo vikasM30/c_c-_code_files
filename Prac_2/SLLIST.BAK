@@ -1,0 +1,90 @@
+#include<iostream.h>
+#include<conio.h>
+#include<stddef.h>
+#include<process.h>
+struct node
+{
+	int data;
+	node*next;
+};
+node*top;
+void push(int);
+void pop();
+void print();
+void main()
+{
+	int num,c;
+	char ch;
+	top=NULL;
+	do
+	{
+		clrscr();
+		cout<<"\nIMPLEMENTATION OF STACK THROUGH LINKED LIST\n\n\n\n";
+		cout<<"1.INSERT\n2.DELETE\n3.PRINT\n4.EXIT";
+		cout<<"\nEnter your choice :";
+		cin>>c;
+		switch(c)
+		{
+			case 1: cout<<"Enter the no. to inserted";
+				cin>>num;
+				push(num); break;
+			case 2: pop(); break;
+			case 3: print(); break;
+			case 4: exit(0);
+			default : cout<<"invalid choice";
+		}
+		cout<<"\nWant to continue......\n";
+		cin>>ch;
+	}while(ch=='y'||ch=='Y');
+	getch();
+}
+void push(int n)
+{
+	node*temp=new node;
+	if(temp==NULL)
+		cout<<"OVERFLOW....!!\n";
+	else
+	{
+		temp->data=n;
+		temp->next=NULL;
+		if(top==NULL)
+			top=temp;
+		else
+		{
+			temp->next=top;
+			top=temp;
+		}
+	}
+}
+void pop()
+{
+	if(top==NULL)
+		cout<<"UNDERFLOW....!!\n";
+	else
+	{
+		node*temp=top;
+		cout<<"Deleted data : "<<temp->data;
+		top=top->next;
+		delete temp;
+	}
+}
+void print()
+{
+	if(top==NULL)
+		cout<<"UNDERFLOW....!!\n";
+	else
+	{
+		node*temp=top;
+		while(temp!=NULL)
+		{
+			cout<<temp->data<<'\t';
+			temp=temp->next;
+		}
+	}
+}
+
+
+
+
+
+

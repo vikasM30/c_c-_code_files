@@ -1,0 +1,18 @@
+#include<stdio.h>
+#include<conio.h>
+void heart(int x)
+{ clrscr();
+cprintf("   ~     ~\r\n");
+cprintf("  * *   * * \r\n");
+cprintf(" *   * *   *\r\n");
+cprintf("*     *     *\r\n");
+cprintf("*     %d    *\r\n",x);
+cprintf(" *         *\r\n");
+cprintf("  *       *\r\n");
+cprintf("   *     *\r\n") ;
+cprintf("    *   *\r\n");
+cprintf("     * *\r\n");
+cprintf("      * \r\n");
+getch();
+
+}

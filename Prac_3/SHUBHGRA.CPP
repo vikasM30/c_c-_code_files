@@ -1,0 +1,12 @@
+#include<stdio.h>
+#include<conio.h>
+#include<graphics.h>
+#include<dos.h>
+void main()
+{clrscr();
+int g=DETECT,h=EGA;
+initgraph(&g,&h,"");
+setbkcolor(RED);
+getch();
+closegraph();
+}

@@ -1,0 +1,20 @@
+#include<iostream.h>
+#include<conio.h>
+#include<math.h>
+void main()
+{
+	clrscr();
+	long int m,x,y=0,i=0;
+	cout<<"enter a decimal number : ";
+	cin>>m;
+	int n=m;
+	while(m>0)
+	{
+		x=m%2;
+		i=i+pow(10,y)*x;
+		y++;
+		m=m/2;
+	}
+	cout<<"the binary equivalent of "<<n<<" is : "<<i;
+	getch();
+}

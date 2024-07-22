@@ -1,0 +1,31 @@
+#include<stdio.h>
+#include<conio.h>
+struct stud
+ {
+ char name[20];
+ unsigned int age;
+ unsigned int rn;
+ char branch[10];
+ char college[50];
+ }s;
+void main()
+  {
+   clrscr();
+   printf("\nenter your name");
+   gets(s.name);
+   printf("\nenter your branch");
+   gets(s.branch);
+   printf("\nenter your college");
+   gets(s.college);
+   printf("\nenter your roll no.");
+   scanf("%d",&s.rn);
+   printf("\nenter your age");
+   scanf("%d",&s.age);
+   printf("\n the details of the student are...\n");
+   printf("NAME:%s",s.name);
+   printf("\nAGE:%d",s.age);
+   printf("\nROLL NO.:%u",s.rn);
+   printf("\nBRANCH:%s",s.branch);
+   printf("\nCOLLEGE:%s",s.college);
+   getch();
+   }

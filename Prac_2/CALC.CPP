@@ -1,0 +1,77 @@
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+#include"heart.c"                   randomize
+void main()
+{
+	clrscr();
+	int a1;
+	char a[40],b[40];
+	textcolor(RED);
+	textbackground(WHITE);
+	gotoxy(30,5);
+	cprintf("WELCOME TO CALCULATOR\r\n");
+	randomize();
+	cprintf("\n\nENTER YOUR NAME :\r\n");
+	scanf("%s",a);
+	cprintf("\n\nENTER YOUR PARTNER'S NAME :\r\n ");
+	scanf("%s",b);
+	clrscr();
+	a1=random(100);
+	gotoxy(30,10);
+	heart(a1);
+	cprintf("\nSONG FOR YOU BOTH ARE :\r\n") ;
+	switch(random(10))
+	{
+		case 0: {
+			textcolor(BLACK);
+			cprintf("ISHQ WALA LOVE \r\n");
+			break;
+			}
+		case 1: {
+			textcolor(BLACK);
+			cprintf("BHULA DENA MUJHE HAI ALVDA TUJHE\r\n") ;
+			break;
+			}
+		case 2: {
+			textcolor(BLACK);
+			cprintf("KYA HUA TERA WADA\r\n");
+			break;
+			}
+		case 3: {
+			textcolor(BLACK);
+			cprintf("MEIN TENU SAMJHAVA KI NAA TERE BINA LAGTA JI\r\n");
+			break;
+			}
+		case 4: {
+			textcolor(BLACK);
+			cprintf("TUM JO AAYE JINDAGI ME BAAT BAN GAI\r\n") ;
+			break;
+			}
+		case 5: {
+			textcolor(BLACK);
+			cprintf("MEIN TENU SAMJHAWA KI");
+			break;
+			}
+		case 6: {
+			textcolor(BLACK);
+			cprintf("MAINE KHUD KO DE DIYA HAI TUJHKO");
+			break;
+			}
+		case 7: {
+			textcolor(BLACK);
+			cprintf("LAG JAA GALE KI PHIR YE HASEEN RAAT HO NAA HO");
+			break;
+			}
+		case 8: {
+			textcolor(BLACK);
+			cprintf("BEWAFA HUM NAHI BEWAFA TUM NAHI FIR YE KYA SILSALE HO GAYE");
+			break;
+			}
+		case 9: {
+			textcolor(BLACK);
+			cprintf("MERA PEHLA PEHLA PYAAR");
+			 }
+}
+getch();
+}
